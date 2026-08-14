@@ -1,6 +1,6 @@
-# Personal Branding - Arya Dhimas
+# Personal Branding Template - Aryaa
 
-Website personal branding untuk **Arya Dhimas** - Web Developer & Software Engineer.
+Template website personal branding **Aryaa** - Web Developer & Software Engineer.
 
 ## 📋 Fitur
 
@@ -64,4 +64,4 @@ Dilisensikan di bawah [MIT License](LICENSE).
 
 ---
 
-© 2024 Arya Dhimas. Semua hak dilindungi.
+© 2024 Aryaa. Semua hak dilindungi.
