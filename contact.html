@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('theme') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+        function syncIcon() {
+          var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+          document.querySelectorAll('.navbar-toggle-theme i').forEach(function (icon) {
+            icon.className = isDark ? 'bi bi-sun' : 'bi bi-moon-stars';
+          });
+        }
+        document.addEventListener('DOMContentLoaded', syncIcon);
+        document.addEventListener('themechange', syncIcon);
+      } catch (e) {}
+    })();
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Kontak Arya Dhimas - Hubungi saya untuk proyek web dan software" />
+  <meta name="author" content="Arya Dhimas" />
+  <title>Kontak | Arya Dhimas</title>
+
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+<link rel="stylesheet" href="assets/css/animation.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+  <link rel="stylesheet" href="assets/css/background.css" />
+  <script>
+    // Jaring pengaman: tampilkan konten & sembunyikan loading screen
+    // segera setelah 1 detik, independen dari DOMContentLoaded/CDN eksternal.
+    setTimeout(function () {
+      document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-zoom')
+        .forEach(function (e) { e.classList.add('active'); });
+      var l = document.getElementById('loading');
+      if (l) { l.classList.add('hidden'); l.style.display = 'none'; }
+      document.body.style.overflow = '';
+    }, 1000);
+  </script>
+</head>
+<body>
+
+  <!-- Animated Background -->
+  <div class="animated-bg" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-dots"></div>
+    <div class="bg-sweep"></div>
+  </div>
+
+  <!-- Reading Progress Bar -->
+  <div class="reading-progress" id="reading-progress"></div>
+
+  <!-- Loading -->
+  <div id="loading">
+    <div class="loader-name">Arya Dhimas</div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  </div>
+
+<!-- Custom Cursor -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-dot"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="navbar-brand">
+        <span class="navbar-brand-logo">AD</span>
+        <span>Arya Dhimas</span>
+      </a>
+      <ul class="navbar-menu">
+        <li><a href="index.html" class="navbar-link">Beranda</a></li>
+        <li><a href="about.html" class="navbar-link">Tentang</a></li>
+        <li><a href="skills.html" class="navbar-link">Skill</a></li>
+        <li><a href="portfolio.html" class="navbar-link">Portfolio</a></li>
+        <li><a href="services.html" class="navbar-link">Layanan</a></li>
+        <li><a href="contact.html" class="navbar-link active">Kontak</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <button class="navbar-toggle-theme" aria-label="Toggle tema"><i class="bi bi-moon-stars"></i></button>
+        <a href="contact.html" class="btn btn-primary">Hubungi Saya</a>
+        <button class="navbar-toggle" aria-label="Buka menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="navbar-mobile" id="navbar-mobile">
+    <a href="index.html" class="navbar-link">Beranda</a>
+    <a href="about.html" class="navbar-link">Tentang</a>
+    <a href="skills.html" class="navbar-link">Skill</a>
+    <a href="portfolio.html" class="navbar-link">Portfolio</a>
+    <a href="services.html" class="navbar-link">Layanan</a>
+    <a href="contact.html" class="navbar-link active">Kontak</a>
+    <a href="contact.html" class="btn btn-primary navbar-mobile-btn">Hubungi Saya</a>
+  </div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-tag reveal">Kontak</span>
+      <h1 class="reveal delay-1">Hubungi Saya</h1>
+      <p class="reveal delay-2">Punya pertanyaan atau proyek? Mari berdiskusi bersama.</p>
+      <div class="breadcrumb reveal delay-3">
+        <a href="index.html">Beranda</a> / Kontak
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Info Kontak -->
+        <div class="contact-info reveal-left">
+          <h3>Mari Berkolaborasi</h3>
+          <p>
+            Saya selalu terbuka untuk proyek baru dan peluang kolaborasi.
+            Jangan ragu untuk menghubungi saya melalui formulir atau
+            informasi kontak berikut.
+          </p>
+          <div class="contact-item">
+            <i class="bi bi-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <p>arya@email.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="bi bi-whatsapp"></i>
+            <div>
+              <h4>WhatsApp</h4>
+              <p>+62 896-4707-6472</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="bi bi-geo-alt"></i>
+            <div>
+              <h4>Lokasi</h4>
+              <p>Indonesia</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="bi bi-clock"></i>
+            <div>
+              <h4>Jam Kerja</h4>
+              <p>Senin - Jumat, 09.00 - 17.00 WIB</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Kontak -->
+        <form class="contact-form reveal-right" id="contact-form">
+          <div class="form-status"></div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nama</label>
+              <input type="text" id="name" name="name" placeholder="Nama Anda" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="email@example.com" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subjek</label>
+            <input type="text" id="subject" name="subject" placeholder="Subjek pesan" />
+          </div>
+          <div class="form-group">
+            <label for="message">Pesan</label>
+            <textarea id="message" name="message" placeholder="Tulis pesan Anda di sini..."></textarea>
+          </div>
+          <div class="form-group">
+            <label for="captcha">Verifikasi (Anti-Spam)</label>
+            <div class="captcha-box">
+              <span class="captcha-question" id="captcha-question"></span>
+              <input type="text" id="captcha" name="captcha" placeholder="Jawaban" autocomplete="off" inputmode="numeric" />
+              <button type="button" class="captcha-refresh" id="captcha-refresh" aria-label="Ganti soal" title="Ganti soal">
+                <i class="bi bi-arrow-repeat"></i>
+              </button>
+            </div>
+            <input type="hidden" id="captcha-answer" name="captcha_answer" />
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+            Kirim Pesan <i class="bi bi-send"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Arya Dhimas</h3>
+<p>Web Developer &amp; Software Engineer yang berdedikasi untuk menciptakan solusi digital yang modern dan fungsional.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigasi</h4>
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="about.html">Tentang</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="services.html">Layanan</a></li>
+            <li><a href="contact.html">Kontak</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Ikuti Saya</h4>
+          <div class="footer-social-icons">
+            <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span class="year"></span> Arya Dhimas. Semua hak dilindungi.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back To Top -->
+  <button id="back-to-top" aria-label="Kembali ke atas"><i class="bi bi-arrow-up"></i></button>
+
+  <!-- Scripts -->
+  <!-- EmailJS SDK (untuk mengirim pesan ke email) -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/scroll.js"></script>
+<script src="assets/js/theme.js"></script>
+  <script src="assets/js/cursor.js"></script>
+  <script src="assets/js/features.js"></script>
+  <script>
+    document.querySelectorAll('.year').forEach(el => el.textContent = new Date().getFullYear());
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-zoom')
+      .forEach(el => el.classList.add('active'));
+    document.querySelectorAll('.skill-bar-fill')
+      .forEach(el => { el.style.width = (el.getAttribute('data-progress') || '0') + '%'; });
+    if (typeof initFeatures === 'function') initFeatures();
+  </script>
+</body>
+</html>

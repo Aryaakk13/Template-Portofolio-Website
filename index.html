@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <script>
+    // Terapkan tema tersimpan SEBELUM render untuk mencegah flash
+    (function () {
+      try {
+        if (localStorage.getItem('theme') === 'dark') {
+document.documentElement.setAttribute('data-theme', 'dark');
+        }
+        // Sinkronkan ikon tombol tema
+        function syncIcon() {
+          var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+          document.querySelectorAll('.navbar-toggle-theme i').forEach(function (icon) {
+            icon.className = isDark ? 'bi bi-sun' : 'bi bi-moon-stars';
+          });
+        }
+        document.addEventListener('DOMContentLoaded', syncIcon);
+        document.addEventListener('themechange', syncIcon);
+      } catch (e) {}
+    })();
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#09090b" media="(prefers-color-scheme: dark)" />
+  <meta name="description" content="Portfolio personal Arya Dhimas - Web Developer dan Software Engineer" />
+  <meta name="author" content="User" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://aryadhimas.dev/" />
+  <title>User | Web Developer &amp; Software Engineer</title>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://aryadhimas.dev/" />
+  <meta property="og:title" content="User | Web Developer &amp; Software Engineer" />
+  <meta property="og:description" content="Portfolio personal Arya Dhimas - Web Developer dan Software Engineer" />
+  <meta property="og:image" content="https://aryadhimas.dev/assets/images/profile/Arya.jpeg" />
+  <meta property="og:locale" content="id_ID" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Arya Dhimas | Web Developer &amp; Software Engineer" />
+  <meta name="twitter:description" content="Portfolio personal Arya Dhimas - Web Developer dan Software Engineer" />
+  <meta name="twitter:image" content="https://aryadhimas.dev/assets/images/profile/Arya.jpeg" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+<link rel="stylesheet" href="assets/css/animation.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+  <link rel="stylesheet" href="assets/css/background.css" />
+  <script>
+    // Jaring pengaman: tampilkan konten & sembunyikan loading screen
+    // segera setelah 1 detik, independen dari DOMContentLoaded/CDN eksternal.
+    setTimeout(function () {
+      var l = document.getElementById('loading');
+      if (l) { l.classList.add('hidden'); l.style.display = 'none'; }
+      document.body.style.overflow = '';
+    }, 1000);
+  </script>
+
+  <!-- JSON-LD: Person schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Arya Dhimas",
+    "jobTitle": "Web Developer & Software Engineer",
+    "email": "melonetsfy@gmail.com",
+    "url": "https://aryadhimas.dev/",
+    "sameAs": [
+      "https://github.com/Aryaakk13",
+      "https://www.linkedin.com/in/arya-dhimas-dwi-prayogo-1514a4422/",
+      "https://www.instagram.com/melonetsfy/"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Animated Background -->
+  <div class="animated-bg" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-dots"></div>
+    <div class="bg-sweep"></div>
+  </div>
+
+  <!-- Reading Progress Bar -->
+  <div class="reading-progress" id="reading-progress"></div>
+
+  <!-- Loading -->
+  <!-- Loading Component -->
+  <div id="loading">
+    <div class="loader-name">Arya Dhimas</div>
+    <div class="loader-bar">
+      <div class="loader-bar-fill"></div>
+    </div>
+  </div>
+
+<!-- Custom Cursor -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-dot"></div>
+
+  <!-- Navbar -->
+  <!-- Navbar Component -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="navbar-brand">
+        <span class="navbar-brand-logo">AD</span>
+        <span>Arya Dhimas</span>
+      </a>
+      <ul class="navbar-menu">
+        <li><a href="index.html" class="navbar-link active" aria-current="page">Beranda</a></li>
+        <li><a href="about.html" class="navbar-link">Tentang</a></li>
+        <li><a href="skills.html" class="navbar-link">Skill</a></li>
+        <li><a href="portfolio.html" class="navbar-link">Portfolio</a></li>
+        <li><a href="services.html" class="navbar-link">Layanan</a></li>
+        <li><a href="contact.html" class="navbar-link">Kontak</a></li>
+      </ul>
+<div class="navbar-actions">
+        <button class="navbar-toggle-theme" aria-label="Toggle tema" title="Ganti tema">
+          <i class="bi bi-moon-stars" aria-hidden="true"></i>
+        </button>
+        <a href="contact.html" class="btn btn-primary">Hubungi Saya</a>
+        <button class="navbar-toggle" aria-label="Buka menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="navbar-mobile" id="navbar-mobile">
+    <a href="index.html" class="navbar-link active" aria-current="page">Beranda</a>
+    <a href="about.html" class="navbar-link">Tentang</a>
+    <a href="skills.html" class="navbar-link">Skill</a>
+    <a href="portfolio.html" class="navbar-link">Portfolio</a>
+    <a href="services.html" class="navbar-link">Layanan</a>
+    <a href="contact.html" class="navbar-link">Kontak</a>
+    <a href="contact.html" class="btn btn-primary navbar-mobile-btn">Hubungi Saya</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <canvas id="particles-canvas"></canvas>
+    <div class="container">
+      <div class="hero-content">
+        <p class="hero-greeting hero-enter">Halo, Saya</p>
+        <h1 class="hero-name hero-enter-delay-1">Arya Dhimas</h1>
+        <div class="hero-typing hero-enter-delay-2">
+          <span class="typing-text"></span><span class="typing-cursor">|</span>
+        </div>
+        <p class="hero-description hero-enter-delay-3">
+          Saya seorang Web Developer dan Software Engineer yang
+          berfokus pada pembuatan website modern, responsif, dan pengalaman
+          pengguna yang optimal.
+        </p>
+        <div class="hero-actions hero-enter-delay-3">
+          <a href="portfolio.html" class="btn btn-primary btn-lg">
+            Lihat Portfolio <i class="bi bi-arrow-right" aria-hidden="true"></i>
+          </a>
+          <a href="contact.html" class="btn btn-outline btn-lg">Hubungi Saya</a>
+        </div>
+        <div class="hero-socials hero-enter-delay-3">
+          <a href="https://github.com/Aryaakk13" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="bi bi-github" aria-hidden="true"></i></a>
+          <a href="https://www.linkedin.com/in/arya-dhimas-dwi-prayogo-1514a4422/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/melonetsfy/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+          <a href="https://wa.me/6289647076472" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="hero-scroll">
+      <span>Scroll</span>
+      <i class="bi bi-chevron-down" aria-hidden="true"></i>
+    </a>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image reveal-left">
+          <img src="assets/images/profile/Arya.jpeg" alt="Foto profil Arya Dhimas, Web Developer dan Software Engineer" loading="lazy" style="width:100%;height:auto;object-fit:cover;" />
+        </div>
+        <div class="about-text reveal-right">
+          <span class="section-tag">Tentang Saya</span>
+          <h3>Web Developer &amp; Software Engineer</h3>
+          <p>
+Saya Arya Dhimas, seorang software engineer yang juga memiliki
+            keahlian dalam pengembangan aplikasi dan perancangan sistem. Saya menggabungkan
+            kreativitas dan teknologi untuk menciptakan solusi digital
+            yang fungsional dan estetis.
+          </p>
+          <p>
+Dengan pengalaman di berbagai bidang pengembangan perangkat lunak,
+            saya selalu berusaha memberikan hasil
+            terbaik untuk setiap proyek yang saya kerjakan.
+          </p>
+          <div class="about-info">
+            <div class="about-info-item">
+              <i class="bi bi-person" aria-hidden="true"></i> <span><strong>Nama:</strong> Arya Dhimas</span>
+            </div>
+            <div class="about-info-item">
+              <i class="bi bi-envelope" aria-hidden="true"></i> <span><strong>Email:</strong> melonetsfy@gmail.com</span>
+            </div>
+            <div class="about-info-item">
+              <i class="bi bi-geo-alt" aria-hidden="true"></i> <span><strong>Lokasi:</strong> Indonesia</span>
+            </div>
+            <div class="about-info-item">
+              <i class="bi bi-briefcase" aria-hidden="true"></i> <span><strong>Status:</strong> Terbuka untuk kolaborasi</span>
+            </div>
+          </div>
+          <a href="about.html" class="btn btn-outline">Selengkapnya <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Keahlian</span>
+        <h2 class="section-title">Keterampilan Saya</h2>
+        <p class="section-subtitle">
+          Teknologi dan tools yang saya kuasai untuk membangun solusi digital yang berkualitas.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Frontend -->
+        <div class="skills-category reveal">
+          <div class="skills-category-header">
+            <i class="bi bi-code-slash" aria-hidden="true"></i>
+            <h3>Frontend</h3>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item-header"><span>HTML</span><span>90%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-progress="90"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item-header"><span>CSS</span><span>85%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-progress="85"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item-header"><span>JavaScript</span><span>80%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-progress="80"></div></div>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="skills-category reveal delay-1">
+          <div class="skills-category-header">
+            <i class="bi bi-database-gear" aria-hidden="true"></i>
+            <h3>Backend</h3>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item-header"><span>PHP</span><span>75%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-progress="75"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item-header"><span>MySQL</span><span>70%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-progress="70"></div></div>
+          </div>
+        </div>
+
+        <!-- Programming -->
+        <div class="skills-category reveal delay-2">
+          <div class="skills-category-header">
+            <i class="bi bi-cpu" aria-hidden="true"></i>
+            <h3>Programming</h3>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item-header"><span>Java</span><span>70%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-progress="70"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item-header"><span>C++</span><span>65%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-progress="65"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item-header"><span>C#</span><span>60%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-progress="60"></div></div>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skills-category reveal delay-3">
+          <div class="skills-category-header">
+            <i class="bi bi-tools" aria-hidden="true"></i>
+            <h3>Tools</h3>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item-header"><span>Git</span><span>80%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-progress="80"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item-header"><span>GitHub</span><span>80%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-progress="80"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item-header"><span>Figma</span><span>75%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-progress="75"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item-header"><span>VS Code</span><span>90%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-progress="90"></div></div>
+          </div>
+        </div>
+
+        <!-- Other -->
+        <div class="skills-category reveal delay-4">
+          <div class="skills-category-header">
+            <i class="bi bi-stars" aria-hidden="true"></i>
+            <h3>Other</h3>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item-header"><span>UI/UX</span><span>75%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-progress="75"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item-header"><span>Responsive Design</span><span>85%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-progress="85"></div></div>
+          </div>
+<div class="skill-item">
+            <div class="skill-item-header"><span>Node.js</span><span>80%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-progress="80"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item-header"><span>System Design</span><span>70%</span></div>
+            <div class="skill-bar"><div class="skill-bar-fill" data-progress="70"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Pengalaman</span>
+        <h2 class="section-title">Perjalanan Karier Saya</h2>
+        <p class="section-subtitle">Pengalaman kerja dan proyek yang telah saya kerjakan sepanjang karier.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2024 - Sekarang</span>
+            <h3>Freelance Web Developer</h3>
+            <h4>Freelance</h4>
+            <p>Mengembangkan website company profile, landing page, dan personal branding untuk berbagai klien.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-left delay-1">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+<span class="timeline-date">2023 - Sekarang</span>
+            <h3>Software Engineer</h3>
+            <h4>Personal Project</h4>
+            <p>Mengembangkan aplikasi web, merancang arsitektur sistem, dan membangun solusi perangkat lunak yang scalable.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-left delay-2">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2022 - 2023</span>
+            <h3>UI/UX Designer</h3>
+            <h4>Freelance</h4>
+            <p>Mendesain tampilan UI aplikasi mobile dan dashboard dengan fokus pada pengalaman pengguna.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-left delay-3">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2021 - 2022</span>
+            <h3>Frontend Developer</h3>
+            <h4>Personal Project</h4>
+            <p>Membangun website responsif dan interaktif dengan fokus pada performa dan aksesibilitas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section class="section section-alt" id="portfolio">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Portfolio</span>
+        <h2 class="section-title">Karya Terbaik Saya</h2>
+        <p class="section-subtitle">Beberapa proyek yang telah saya kerjakan di berbagai bidang.</p>
+      </div>
+
+<!-- Grid Portfolio -->
+      <div class="portfolio-grid">
+        <div class="portfolio-card reveal-zoom" data-category="website">
+          <img src="assets/images/project/p1.png" alt="Tangkapan layar aplikasi Optimizer Laptop / PC" loading="lazy" />
+          <div class="portfolio-overlay">
+            <h3>Optimizer Laptop / PC</h3>
+            <p>Membantu mengoptimalkan Laptop / PC anda</p>
+            <div class="portfolio-tags">
+              <span>Python</span><span>PyQt</span><span>HTML</span><span>TeX</span>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-card reveal-zoom delay-1" data-category="website">
+          <img src="assets/images/project/p2.png" alt="Tangkapan layar website Resepsionis Virtual Semarang" loading="lazy" />
+          <div class="portfolio-overlay">
+            <h3>Website Resepsionis Virtual</h3>
+            <p>Mengenalkan jasa Resepsionis Virtual - Semarang</p>
+            <div class="portfolio-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+<div class="portfolio-card reveal-zoom delay-2" data-category="software">
+          <img src="assets/images/project/p3.png" alt="Tangkapan layar website IT Solutions" loading="lazy" />
+          <div class="portfolio-overlay">
+            <h3>Website IT Solutions</h3>
+            <p>Menyediakan layanan Website Development, Networking, IT Support, Cloud Solution, dan konsultasi teknologi profesional.</p>
+            <div class="portfolio-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-card reveal-zoom" data-category="software">
+          <img src="assets/images/project/p4.png" alt="Tangkapan layar website Community Store" loading="lazy" />
+          <div class="portfolio-overlay">
+            <h3>Community Store</h3>
+            <p>Menyediakan layanan Server Multiplayer, Store In-game, Leaderboard, dan komunitas aktif dengan event mingguan.</p>
+            <div class="portfolio-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>TypeScript</span>
+            </div>
+          </div>
+        </div>
+<div class="portfolio-card reveal-zoom delay-1" data-category="ui">
+          <img src="assets/images/project/p5.png" alt="Tangkapan layar desain UI aplikasi mobile" loading="lazy" />
+          <div class="portfolio-overlay">
+            <h3>Mobile App UI Design</h3>
+            <p>Desain UI aplikasi mobile modern dengan Figma.</p>
+            <div class="portfolio-tags">
+              <span>Figma</span><span>UI/UX</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top: 2rem;">
+        <a href="portfolio.html" class="btn btn-outline">Lihat Semua Karya <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section section-alt" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Layanan</span>
+        <h2 class="section-title">Apa yang Saya Tawarkan</h2>
+        <p class="section-subtitle">Layanan profesional untuk membantu kebutuhan digital Anda.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="bi bi-code-slash" aria-hidden="true"></i></div>
+          <h3>Web Development</h3>
+          <p>Pembuatan website modern, responsif, dan cepat dengan HTML, CSS, dan JavaScript.</p>
+        </div>
+        <div class="service-card reveal delay-1">
+          <div class="service-icon"><i class="bi bi-bezier2" aria-hidden="true"></i></div>
+          <h3>UI/UX Design</h3>
+          <p>Desain antarmuka yang menarik dan mudah digunakan dengan Figma.</p>
+        </div>
+<div class="service-card reveal delay-2">
+          <div class="service-icon"><i class="bi bi-cpu" aria-hidden="true"></i></div>
+          <h3>Backend Development</h3>
+          <p>Pengembangan REST API dan backend service yang handal, aman, dan scalable.</p>
+        </div>
+        <div class="service-card reveal delay-3">
+          <div class="service-icon"><i class="bi bi-cloud-arrow-up" aria-hidden="true"></i></div>
+          <h3>Cloud &amp; Deployment</h3>
+          <p>Deployment dan manajemen aplikasi di cloud dengan praktik terbaik DevOps.</p>
+        </div>
+        <div class="service-card reveal delay-4">
+          <div class="service-icon"><i class="bi bi-window-sidebar" aria-hidden="true"></i></div>
+          <h3>Company Profile</h3>
+          <p>Pembuatan company profile website yang profesional untuk bisnis Anda.</p>
+        </div>
+        <div class="service-card reveal delay-5">
+          <div class="service-icon"><i class="bi bi-cart" aria-hidden="true"></i></div>
+<h3>Store Website</h3>
+          <p>Website toko e-commerce dengan integrasi pembayaran dan manajemen produk.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics -->
+  <section class="section" id="statistics">
+    <div class="container">
+      <div class="statistics-grid">
+        <div class="stat-item reveal">
+          <div class="stat-number"><span data-counter="5">0</span>+</div>
+          <div class="stat-label">Proyek Selesai</div>
+        </div>
+        <div class="stat-item reveal delay-1">
+          <div class="stat-number"><span data-counter="0">0</span></div>
+          <div class="stat-label">Klien Puas</div>
+        </div>
+        <div class="stat-item reveal delay-2">
+          <div class="stat-number"><span data-counter="3">0</span>+</div>
+          <div class="stat-label">Tahun Pengalaman</div>
+        </div>
+        <div class="stat-item reveal delay-3">
+          <div class="stat-number"><span data-counter="0">0</span></div>
+          <div class="stat-label">Sertifikat</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Kontak</span>
+        <h2 class="section-title">Hubungi Saya</h2>
+        <p class="section-subtitle">Punya proyek atau pertanyaan? Jangan ragu untuk menghubungi saya.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Info Kontak -->
+        <div class="contact-info reveal-left">
+          <h3>Mari Berkolaborasi</h3>
+          <p>
+            Saya selalu terbuka untuk proyek baru dan peluang kolaborasi.
+            Jangan ragu untuk menghubungi saya melalui formulir atau
+            informasi kontak di bawah ini.
+          </p>
+          <div class="contact-item">
+            <i class="bi bi-envelope" aria-hidden="true"></i>
+            <div>
+              <h4>Email</h4>
+              <p>melonetsfy@gmail.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="bi bi-whatsapp" aria-hidden="true"></i>
+            <div>
+              <h4>WhatsApp</h4>
+              <p>+62 896-4707-6472</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="bi bi-geo-alt" aria-hidden="true"></i>
+            <div>
+              <h4>Lokasi</h4>
+              <p>Indonesia</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Kontak -->
+        <form class="contact-form reveal-right" id="contact-form" novalidate>
+          <div class="form-status" role="status" aria-live="polite"></div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nama</label>
+              <input type="text" id="name" name="name" placeholder="Nama Anda" autocomplete="name" required minlength="2" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="email@example.com" autocomplete="email" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subjek</label>
+            <input type="text" id="subject" name="subject" placeholder="Subjek pesan" required minlength="3" />
+          </div>
+          <div class="form-group">
+            <label for="message">Pesan</label>
+            <textarea id="message" name="message" placeholder="Tulis pesan Anda di sini..." required minlength="10" rows="5"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+            Kirim Pesan <i class="bi bi-send" aria-hidden="true"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Arya Dhimas</h3>
+          <p>
+Web Developer &amp; Software Engineer yang berdedikasi
+            untuk menciptakan solusi digital yang modern dan fungsional.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigasi</h4>
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="about.html">Tentang</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="services.html">Layanan</a></li>
+            <li><a href="contact.html">Kontak</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Ikuti Saya</h4>
+          <div class="footer-social-icons">
+            <a href="https://github.com/Aryaakk13" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="bi bi-github" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/arya-dhimas-dwi-prayogo-1514a4422/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/melonetsfy/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+            <a href="https://wa.me/6289647076472" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Arya Dhimas. Semua hak dilindungi.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back To Top -->
+  <button id="back-to-top" aria-label="Kembali ke atas">
+    <i class="bi bi-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/typing.js"></script>
+  <script src="assets/js/particles.js"></script>
+  <script src="assets/js/scroll.js"></script>
+<script src="assets/js/theme.js"></script>
+  <script src="assets/js/cursor.js"></script>
+  <script src="assets/js/features.js"></script>
+  <script>
+    // Set tahun otomatis di footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Inisialisasi fitur tambahan
+    if (typeof initFeatures === 'function') initFeatures();
+  </script>
+</body>
+</html>

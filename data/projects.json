@@ -1,0 +1,103 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Company Profile Website",
+      "category": "website",
+      "categoryLabel": "Company Profile",
+      "description": "Situs profil perusahaan modern dengan desain profesional dan responsif.",
+      "image": "assets/images/project/company-profile.jpg",
+      "tags": ["HTML", "CSS", "JavaScript"],
+      "link": "pages/project-detail.html",
+      "year": 2024
+    },
+    {
+      "id": 2,
+      "title": "Landing Page Produk",
+      "category": "website",
+      "categoryLabel": "Landing Page",
+      "description": "Landing page konversi tinggi dengan optimasi performa.",
+      "image": "assets/images/project/landing-page.jpg",
+      "tags": ["HTML", "CSS", "Bootstrap"],
+      "link": "pages/project-detail.html",
+      "year": 2024
+    },
+    {
+      "id": 3,
+      "title": "Personal Branding Portfolio",
+      "category": "website",
+      "categoryLabel": "Personal Branding",
+      "description": "Portfolio personal dengan animasi modern dan mode gelap.",
+      "image": "assets/images/project/personal-branding.jpg",
+      "tags": ["HTML", "CSS", "JavaScript"],
+      "link": "pages/project-detail.html",
+      "year": 2024
+    },
+{
+      "id": 4,
+      "title": "Web Application Development",
+      "category": "software",
+      "categoryLabel": "Web App",
+      "description": "Pengembangan aplikasi web modern dengan arsitektur scalable dan performa optimal.",
+      "image": "assets/images/project/placeholder.svg",
+      "tags": ["JavaScript", "Node.js", "REST API"],
+      "link": "pages/project-detail.html",
+      "year": 2023
+    },
+    {
+      "id": 5,
+      "title": "API Development",
+      "category": "software",
+      "categoryLabel": "API",
+      "description": "Perancangan dan implementasi RESTful API yang aman dan efisien.",
+      "image": "assets/images/project/placeholder.svg",
+      "tags": ["Node.js", "Express", "PostgreSQL"],
+      "link": "pages/project-detail.html",
+      "year": 2023
+    },
+    {
+      "id": 6,
+      "title": "Full-Stack E-Commerce",
+      "category": "software",
+      "categoryLabel": "E-Commerce",
+      "description": "Website e-commerce lengkap dengan integrasi pembayaran dan manajemen produk.",
+      "image": "assets/images/project/placeholder.svg",
+      "tags": ["React", "Node.js", "Payment Gateway"],
+      "link": "pages/project-detail.html",
+      "year": 2023
+    },
+    {
+      "id": 7,
+      "title": "Mobile App UI Design",
+      "category": "ui",
+      "categoryLabel": "Mobile",
+      "description": "Desain UI aplikasi mobile dengan Figma.",
+      "image": "assets/images/project/mobile-ui.jpg",
+      "tags": ["Figma", "UI/UX"],
+      "link": "pages/project-detail.html",
+      "year": 2023
+    },
+    {
+      "id": 8,
+      "title": "Admin Dashboard Design",
+      "category": "ui",
+      "categoryLabel": "Dashboard",
+      "description": "Desain dashboard admin yang informatif dan mudah digunakan.",
+      "image": "assets/images/project/dashboard-ui.jpg",
+      "tags": ["Figma", "UI/UX"],
+      "link": "pages/project-detail.html",
+      "year": 2022
+    },
+    {
+      "id": 9,
+      "title": "System Architecture Design",
+      "category": "software",
+      "categoryLabel": "System Design",
+      "description": "Perancangan arsitektur sistem yang scalable, aman, dan mudah dipelihara.",
+      "image": "assets/images/project/placeholder.svg",
+      "tags": ["System Design", "Microservices", "Cloud"],
+      "link": "pages/project-detail.html",
+      "year": 2024
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "experiences": [
+    {
+      "period": "2024 - Sekarang",
+      "role": "Freelance Web Developer",
+      "company": "Freelance",
+      "description": "Mengembangkan website company profile, landing page, dan personal branding untuk berbagai klien.",
+      "technologies": ["HTML", "CSS", "JavaScript", "PHP"]
+    },
+    {
+      "period": "2023 - Sekarang",
+      "role": "Software Engineer",
+      "company": "Personal Project",
+      "description": "Mengembangkan aplikasi web, merancang arsitektur sistem, dan membangun solusi perangkat lunak yang scalable.",
+      "technologies": ["JavaScript", "Node.js", "System Design"]
+    },
+    {
+      "period": "2022 - 2023",
+      "role": "UI/UX Designer",
+      "company": "Freelance",
+      "description": "Mendesain tampilan UI aplikasi mobile dan dashboard dengan fokus pada pengalaman pengguna.",
+      "technologies": ["Figma", "UI/UX", "Prototyping"]
+    },
+    {
+      "period": "2021 - 2022",
+      "role": "Frontend Developer",
+      "company": "Personal Project",
+      "description": "Membangun website responsif dan interaktif dengan fokus pada performa dan aksesibilitas.",
+      "technologies": ["HTML", "CSS", "JavaScript"]
+    }
+  ]
+}

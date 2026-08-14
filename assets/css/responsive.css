@@ -1,0 +1,285 @@
+/* ============================================
+   responsive.css
+   Responsive Design
+   ============================================ */
+
+/* ---------- Navbar mobile: sembunyikan default ---------- */
+.navbar-mobile {
+  display: none;
+}
+
+.navbar-mobile.active {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Large desktop (min 1200px) ---------- */
+@media (min-width: 1200px) {
+  :root {
+    --fs-3xl: 4rem;
+  }
+}
+
+/* ---------- Tablet landscape (992px - 1199px) ---------- */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* ---------- Tablet (768px - 991px) ---------- */
+@media (max-width: 991px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .navbar-menu,
+  .navbar-actions .btn {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .about-image {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-name {
+    font-size: var(--fs-2xl);
+  }
+
+  .hero-typing {
+    font-size: var(--fs-lg);
+  }
+}
+
+/* ---------- Mobile landscape (576px - 767px) ---------- */
+@media (max-width: 767px) {
+  .container {
+    max-width: 540px;
+  }
+
+  :root {
+    --space-2xl: 4rem;
+  }
+
+  .section-title {
+    font-size: var(--fs-xl);
+  }
+
+  .hero {
+    text-align: center;
+  }
+
+  .hero-content {
+    margin: 0 auto;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions,
+  .hero-socials {
+    justify-content: center;
+  }
+
+  .about-highlights {
+    justify-content: center;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .statistics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---------- Mobile portrait (max 575px) ---------- */
+@media (max-width: 575px) {
+  .container {
+    padding: 0 var(--space-sm);
+  }
+
+  .hero-name {
+    font-size: var(--fs-xl);
+  }
+
+  .hero-typing {
+    font-size: var(--fs-md);
+    min-height: 2rem;
+  }
+
+  .about-info {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .certificate-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .statistics-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-sm);
+  }
+
+  .stat-number {
+    font-size: var(--fs-2xl);
+  }
+
+  .testimonial-card {
+    padding: var(--space-lg);
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .navbar-mobile {
+    width: 100%;
+  }
+
+  .page-hero h1 {
+    font-size: var(--fs-xl);
+  }
+}
+
+/* ---------- Small mobile (max 400px) ---------- */
+@media (max-width: 400px) {
+  .statistics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-highlights {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+}
+
+/* ---------- Print styles ---------- */
+@media print {
+  .navbar,
+  #loading,
+  #back-to-top,
+  .custom-cursor,
+  .hero-scroll {
+    display: none !important;
+  }
+
+  body {
+    background-color: #fff;
+    color: #000;
+  }
+}
+
+/* ============================================
+   Mobile Touch Support (Android / iPhone)
+   ============================================ */
+
+/* Hilangkan highlight abu-abu saat tap di Android/iOS */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Safe-area untuk iPhone dengan notch & home bar.
+   Memakai padding sekaligus fallback lalu env(). */
+@supports (padding: env(safe-area-inset-top)) {
+  .navbar {
+    padding-top: env(safe-area-inset-top);
+    height: calc(var(--navbar-height) + env(safe-area-inset-top));
+  }
+
+  .navbar-mobile {
+    top: calc(var(--navbar-height) + env(safe-area-inset-top));
+  }
+
+  .page-hero {
+    padding-top: calc(
+      var(--navbar-height) + env(safe-area-inset-top) + var(--space-xl)
+    );
+  }
+
+  .footer {
+    padding-bottom: calc(var(--space-md) + env(safe-area-inset-bottom));
+  }
+
+  #back-to-top {
+    bottom: calc(var(--space-lg) + env(safe-area-inset-bottom));
+  }
+}
+
+/* Cegah auto-zoom iOS saat fokus ke input (font >= 16px) */
+@media (max-width: 767px) {
+  input,
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}
+
+/* Touch target lebih besar di layar kecil */
+@media (max-width: 767px) {
+  .filter-btn,
+  .navbar-toggle-theme,
+  .navbar-toggle {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .filter-btn {
+    padding: 0.6rem 1.4rem;
+  }
+
+  .navbar-toggle-theme,
+  .navbar-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "certificates": [
+    {
+      "id": 1,
+      "title": "Web Development Fundamentals",
+      "issuer": "FreeCodeCamp",
+      "year": "2024",
+      "icon": "bi-patch-check"
+    },
+    {
+      "id": 2,
+      "title": "JavaScript Algorithms",
+      "issuer": "FreeCodeCamp",
+      "year": "2023",
+      "icon": "bi-file-earmark-check"
+    },
+    {
+      "id": 3,
+      "title": "Responsive Web Design",
+      "issuer": "FreeCodeCamp",
+      "year": "2023",
+      "icon": "bi-display"
+    },
+    {
+      "id": 4,
+      "title": "UI/UX Design Essentials",
+      "issuer": "Coursera",
+      "year": "2022",
+      "icon": "bi-bezier2"
+    },
+    {
+      "id": 5,
+      "title": "Software Engineering Fundamentals",
+      "issuer": "Online Course",
+      "year": "2022",
+      "icon": "bi-cpu"
+    },
+    {
+      "id": 6,
+      "title": "Version Control with Git",
+      "issuer": "Coursera",
+      "year": "2022",
+      "icon": "bi-git"
+    }
+  ]
+}

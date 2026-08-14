@@ -1,0 +1,50 @@
+{
+  "skills": [
+    {
+      "category": "Frontend",
+      "icon": "bi-code-slash",
+      "skills": [
+        { "name": "HTML", "level": 90 },
+        { "name": "CSS", "level": 85 },
+        { "name": "JavaScript", "level": 80 }
+      ]
+    },
+    {
+      "category": "Backend",
+      "icon": "bi-database-gear",
+      "skills": [
+        { "name": "PHP", "level": 75 },
+        { "name": "MySQL", "level": 70 }
+      ]
+    },
+    {
+      "category": "Programming",
+      "icon": "bi-cpu",
+      "skills": [
+        { "name": "Java", "level": 70 },
+        { "name": "C++", "level": 65 },
+        { "name": "C#", "level": 60 }
+      ]
+    },
+    {
+      "category": "Tools",
+      "icon": "bi-tools",
+      "skills": [
+        { "name": "Git", "level": 80 },
+        { "name": "GitHub", "level": 80 },
+        { "name": "Figma", "level": 75 },
+        { "name": "VS Code", "level": 90 }
+      ]
+    },
+    {
+      "category": "Other",
+      "icon": "bi-stars",
+      "skills": [
+        { "name": "UI/UX", "level": 75 },
+        { "name": "Responsive Design", "level": 85 },
+        { "name": "Node.js", "level": 80 },
+        { "name": "System Design", "level": 70 }
+      ]
+    }
+  ]
+}
